@@ -6,7 +6,7 @@ Personal collection of CTF and pentesting writeups, available in English, French
 
 | Machine | Difficulty | OS | Type | EN | FR | JA |
 |---------|------------|-----|------|:--:|:--:|:--:|
-| Garfield (will be there once retired) | Hard | Windows | Active Directory | [EN](HackTheBox/Garfield/README.md) | [FR](HackTheBox/Garfield/README.fr.md) | [JA](HackTheBox/Garfield/README.ja.md) |
+| Garfield | Hard | Windows | Active Directory | [EN](HackTheBox/Garfield/README.md) | [FR](HackTheBox/Garfield/README.fr.md) | [JA](HackTheBox/Garfield/README.ja.md) |
 | DevArea | Medium | Linux | Web / Middleware | [EN](HackTheBox/DevArea/README.md) | [FR](HackTheBox/DevArea/README.fr.md) | [JA](HackTheBox/DevArea/README.jp.md) |
 | Kobold | Easy | Linux | Web / Docker | [EN](HackTheBox/Kobold/README.md) | [FR](HackTheBox/Kobold/README.fr.md) | [JA](HackTheBox/Kobold/README.ja.md) |
 | MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) | [FR](HackTheBox/MonitorsThree/README.fr.md) | [JA](HackTheBox/MonitorsThree/README.ja.md) |
@@ -25,6 +25,8 @@ Personal collection of CTF and pentesting writeups, available in English, French
 
 
 ---
+## Why is there some missing writeup ?
+The ones that are missing are ongoing challenges and writeups for those are not allowed to be osted publicly.
 
 ## How I make my writeups
 
