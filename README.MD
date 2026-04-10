@@ -14,6 +14,18 @@ Personal collection of CTF and pentesting writeups, available in English, French
 
 ---
 
+## <img src="https://dojo-yeswehack.com/YWH_DOJO_2023-Black.svg" height="60">
+
+| Challenge | Type | EN |
+|-----------|------|:--:|
+| Dojo #46 | Command Injection / Unicode NFKC Normalization Bypass (RCE) | [EN](YesWeHackDojo/46/README.en.md) |
+| Dojo #48 | Unsafe Object Deserialization via `Oj.load` (RCE) | [EN](YesWeHackDojo/48/README.en.md) |
+| Dojo #49 | Linux Wildcard Injection in `cp *` (File Disclosure) | [EN](YesWeHackDojo/49/README.en.md) |
+| Dojo #50 | Path Traversal / HMAC Signature Bypass (CRLF Injection) | [EN](YesWeHackDojo/50/README.en.md) |
+
+
+---
+
 ## How I make my writeups
 
 When doing my challenges, I have a little python note CLI where I put my findings, comments and notes, this way when I get the flags, it's all written in a specific format. It then generates me a Markdown resume of my notes that i just need to correct and further explain. It then translate the whole file in French then Japanese (my targets audience / recrutors) and puts it here.
