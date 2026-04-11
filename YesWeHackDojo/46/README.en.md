@@ -117,7 +117,7 @@ echo -n ''; echo $FLAG #' | hexdump
 
 The `#` comments out the rest of the original command, cleanly terminating the injection.
 
-**Flag:** `FLAG{Gh0s7_S4y_BOOO000oooo}`
+**Flag:** `<FLAG>`
 
 ---
 

@@ -104,10 +104,10 @@ An attacker can execute arbitrary shell commands on the server without any authe
 **Output:**
 
 ```
-FLAG{Th4t_J0b_D1d_N07_Go_A5_Exp3ct3d}
+<FLAG>
 ```
 
-**Flag:** `FLAG{Th4t_J0b_D1d_N07_Go_A5_Exp3ct3d}`
+**Flag:** `<FLAG>`
 
 ---
 

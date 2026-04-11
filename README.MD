@@ -1,6 +1,6 @@
 # Writeups
 
-Personal collection of CTF and pentesting writeups, available in English, French, and Japanese.
+Personal collection of CTF writeups, available in English, French, and Japanese.
 
 ## <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6PwGYawa5tdEF66L7-UEpgTkcdZ4F3D1YnA&s" style>
 

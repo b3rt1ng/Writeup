@@ -114,10 +114,10 @@ grep -r "FLAG" -- extracted internal_secrets user_secrets.txt vaults --exclude-d
 
 ```
 Search results for 'FLAG':
-internal_secrets/flag.txt:FLAG{A1m_F0r_Th3_St4r!}
+internal_secrets/flag.txt:<FLAG>
 ```
 
-**Flag:** `FLAG{A1m_F0r_Th3_St4r!}`
+**Flag:** `<FLAG>`
 
 ---
 
