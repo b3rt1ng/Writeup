@@ -9,6 +9,7 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | Garfield | Hard | Windows | Active Directory | [EN](HackTheBox/Garfield/README.md) | [FR](HackTheBox/Garfield/README.fr.md) | [JA](HackTheBox/Garfield/README.ja.md) |
 | DevArea | Medium | Linux | Web / Middleware | [EN](HackTheBox/DevArea/README.md) | [FR](HackTheBox/DevArea/README.fr.md) | [JA](HackTheBox/DevArea/README.jp.md) |
 | Kobold | Easy | Linux | Web / Docker | [EN](HackTheBox/Kobold/README.md) | [FR](HackTheBox/Kobold/README.fr.md) | [JA](HackTheBox/Kobold/README.ja.md) |
+| Silentium | Easy | Linux | Web / CVE Chain | [EN](HackTheBox/Silentium/README.md) | [FR](HackTheBox/Silentium/README.fr.md) | [JA](HackTheBox/Silentium/README.ja.md) |
 | MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) | [FR](HackTheBox/MonitorsThree/README.fr.md) | [JA](HackTheBox/MonitorsThree/README.ja.md) |
 
 
