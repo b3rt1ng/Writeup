@@ -11,6 +11,7 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | Kobold | Easy | Linux | Web / Docker | [EN](HackTheBox/Kobold/README.md) | [FR](HackTheBox/Kobold/README.fr.md) | [JA](HackTheBox/Kobold/README.ja.md) |
 | Silentium | Easy | Linux | Web / CVE Chain | [EN](HackTheBox/Silentium/README.md) | [FR](HackTheBox/Silentium/README.fr.md) | [JA](HackTheBox/Silentium/README.ja.md) |
 | MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) | [FR](HackTheBox/MonitorsThree/README.fr.md) | [JA](HackTheBox/MonitorsThree/README.ja.md) |
+| Logging | Medium | Windows | Active Directory / WSUS / ADCS | [EN](HackTheBox/Logging/README.md) | [FR](HackTheBox/Logging/README.fr.md) | [JA](HackTheBox/Logging/README.ja.md) |
 
 
 ---
