@@ -29,14 +29,10 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 
 ---
 ## Why is there some missing writeup ?
-The ones that are missing are ongoing challenges and writeups for those are not allowed to be osted publicly.
+The ones that are missing are ongoing challenges and writeups (for those), are not allowed to be posted publicly. Patience !
 
 ## How I make my writeups
 
-When doing my challenges, I have a little python note CLI where I put my findings, comments and notes, this way when I get the flags, it's all written in a specific format. It then generates me a Markdown resume of my notes that i just need to correct and further explain. It then translate the whole file in French then Japanese (my targets audience / recrutors) and puts it here.
+When doing my challenges, I have a little python note CLI where I put my findings, comments, notes, as well as the history of my commands. This way when I get the flags, I can easily realy on my paths registration. It then generates me a Markdown resume of my notes that i just need to correct and further explain. It then translate the whole file in French then Japanese (my targets audience / recrutors) and puts it here.
 
-## Disclaimer
-
-All writeups and techniques are for educational purposes only, meant for pentesting and legal scoped hacking.
-
-Machines are retired before solutions are published.
+Note that for my DOJOs, the reports are made entirely by hand so as of now there's only the english version.
