@@ -31,6 +31,8 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 ## Why is there some missing writeup ?
 The ones that are missing are ongoing challenges and writeups (for those), are not allowed to be posted publicly. Patience !
 
+I still add the name of the challenges I did as a POC (Proof Of Competence).
+
 ## How I make my writeups
 
 When doing my challenges, I have a little python note CLI where I put my findings, comments, notes, as well as the history of my commands. This way when I get the flags, I can easily realy on my paths registration. It then generates me a Markdown resume of my notes that i just need to correct and further explain. It then translate the whole file in French then Japanese (my targets audience / recrutors) and puts it here.
