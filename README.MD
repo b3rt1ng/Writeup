@@ -12,6 +12,7 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | Silentium | Easy | Linux | Web / CVE Chain | [EN](HackTheBox/Silentium/README.md) | [FR](HackTheBox/Silentium/README.fr.md) | [JA](HackTheBox/Silentium/README.ja.md) |
 | MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) | [FR](HackTheBox/MonitorsThree/README.fr.md) | [JA](HackTheBox/MonitorsThree/README.ja.md) |
 | Logging | Medium | Windows | Active Directory / WSUS / ADCS | [EN](HackTheBox/Logging/README.md) | [FR](HackTheBox/Logging/README.fr.md) | [JA](HackTheBox/Logging/README.ja.md) |
+| PingPong | Insane | Windows | Active Directory / Cross-Forest Trust / ADCS | [EN](HackTheBox/PingPong/README.md) | [FR](HackTheBox/PingPong/README.fr.md) | [JA](HackTheBox/PingPong/README.ja.md) |
 
 
 ---
