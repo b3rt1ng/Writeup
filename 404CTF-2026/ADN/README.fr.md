@@ -12,7 +12,7 @@ caractères en minuscules/chiffres (ex: `kjeumrrwaeaaav2fijif`, `mubyjquqcaaaf4v
 
 Ce pattern est caractéristique d'une **exfiltration de données via tunneling DNS** :
 l'attaquant découpe un fichier en morceaux, encode chaque morceau (en base32, l'alphabet
-étant compatible avec les contraintes de nommage DNS — minuscules + chiffres), et envoie
+étant compatible avec les contraintes de nommage DNS, soit minuscules + chiffres), et envoie
 chaque morceau comme sous-domaine d'une requête DNS vers un serveur qu'il contrôle.
 
 ## Exploitation

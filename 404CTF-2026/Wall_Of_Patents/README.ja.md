@@ -9,7 +9,7 @@
 `app/uploads/` に展開される)、`GET /comment` でランダムなコメントを取得できる
 Flaskサービスである。**FLAG** は初回起動時にデータベースに挿入され、通常は
 推測すべき `seed` ウィンドウに従ってコメント(`bot_outputs`)を選ぶボットの仕組みを
-通じてしか間接的にアクセスできない — この一連の流れを完全に迂回できない限りは。
+通じてしか間接的にアクセスできない(この一連の流れを完全に迂回できない限りは)。
 
 ## 脆弱性
 
@@ -106,8 +106,8 @@ def search_comments():
 ```
 
 > 注: アプリは `/comment` ルートのために `search_comments` しか必要としないため、
-> 最小限のスタブで十分である(本物のモジュールの他の関数 — `init_db`、`search_patents`、
-> `add_patent`、`add_comment`、`change_seed` — は、アプリが既に初期化されセッションが
+> 最小限のスタブで十分である(本物のモジュールの他の関数、すなわち `init_db`、`search_patents`、
+> `add_patent`、`add_comment`、`change_seed` は、アプリが既に初期化されセッションが
 > 既に開かれた後は呼び出されない)。
 
 ## 攻略スクリプト(`solver.py`)

@@ -8,7 +8,7 @@ The application uses an unsafe `cp *` shell command to back up uploaded files in
 
 ---
 
-## Root Cause — Step-by-Step Breakdown
+## Root Cause: Step-by-Step Breakdown
 
 The vulnerability chain occurs across two insecure shell invocations:
 
@@ -22,7 +22,7 @@ os.chdir(VAULT_FOLDER)
 result = os.popen(f'grep -r "{grep}" * --exclude-dir=internal_secrets 2>/dev/null').read()  # (2) Wildcard injection in grep
 ```
 
-### Step 1 — Wildcard injection into `cp` via a filename named `-r`
+### Step 1: Wildcard injection into `cp` via a filename named `-r`
 
 The attacker creates a file literally named `-r` in the upload folder. When the shell expands `cp *`, it becomes:
 
@@ -36,7 +36,7 @@ The `-r` flag is now active, so `cp` copies the `internal_secrets/` directory **
 /tmp/uploads/vaults/internal_secrets/flag.txt  ← now accessible
 ```
 
-### Step 2 — Pre-placing a `--` file in the vault via path traversal
+### Step 2: Pre-placing a `--` file in the vault via path traversal
 
 The filename validation only blocks paths starting with `/` or containing `..`. A path like `vaults/--` passes all checks:
 
@@ -48,7 +48,7 @@ elif '\\' in filename or '..' in filename:  # ❌ blocked
 
 So the attacker creates a file named `vaults/--`, which writes directly to `/tmp/uploads/vaults/--`.
 
-### Step 3 — `--` neutralizes `--exclude-dir` in `grep`
+### Step 3: `--` neutralizes `--exclude-dir` in `grep`
 
 After `cp *` runs, the vault contains:
 
@@ -66,7 +66,7 @@ When `grep` runs from `VAULT_FOLDER`, the shell expands `*` and `--` ends up as 
 grep -r "FLAG" -- extracted internal_secrets user_secrets.txt vaults --exclude-dir=internal_secrets
 ```
 
-In shell, `--` signals **end of options** — everything after it is treated as a positional argument (a file/directory to search), including `--exclude-dir=internal_secrets`. That argument is now treated as a filename, which doesn't exist, so it's silently ignored. `grep` then searches `internal_secrets/` without any exclusion and finds the flag.
+In shell, `--` signals **end of options**: everything after it is treated as a positional argument (a file/directory to search), including `--exclude-dir=internal_secrets`. That argument is now treated as a filename, which doesn't exist, so it's silently ignored. `grep` then searches `internal_secrets/` without any exclusion and finds the flag.
 
 ---
 
@@ -129,7 +129,7 @@ internal_secrets/flag.txt:<FLAG>
 # ❌ Vulnerable
 os.system(f'cp * {VAULT_FOLDER}')
 
-# ✅ Safe — use Python's shutil instead
+# ✅ Safe, use Python's shutil instead
 import shutil
 for filename in os.listdir(UPLOAD_FOLDER):
     src = os.path.join(UPLOAD_FOLDER, filename)
@@ -155,10 +155,10 @@ for filename in filenames:
 ### 3. Never pass user-controlled data into shell glob commands
 
 ```python
-# ❌ Vulnerable — * expands user-created files as arguments
+# ❌ Vulnerable, * expands user-created files as arguments
 os.popen(f'grep -r "{grep}" * --exclude-dir=internal_secrets')
 
-# ✅ Safe — use Python's grep equivalent
+# ✅ Safe, use Python's grep equivalent
 import subprocess
 result = subprocess.run(
     ['grep', '-r', grep, '.', '--exclude-dir=internal_secrets'],

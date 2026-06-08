@@ -12,14 +12,14 @@ lowercase letters/digits (e.g. `kjeumrrwaeaaav2fijif`, `mubyjquqcaaaf4vucdaa`, .
 
 This pattern is characteristic of **data exfiltration via DNS tunneling**: the attacker
 splits a file into chunks, encodes each chunk (in base32, an alphabet compatible with DNS
-naming constraints — lowercase letters + digits), and sends each chunk as a subdomain of a
+naming constraints, i.e. lowercase letters + digits), and sends each chunk as a subdomain of a
 DNS request to a server they control.
 
 ## Exploitation
 1. **Extraction**: with Scapy, we go through the pcap and collect, in order of appearance, the first label of each DNS request (`qname.split('.')[1]`), deduplicating along the way.
 2. **Reconstruction**: we concatenate all these labels end to end, in order.
 3. **Decoding**: the resulting string is uppercased, padded to a multiple of 8 characters, then decoded as **Base32** (`base64.b32decode`).
-4. The resulting binary data starts with the `RIFF...WEBP` signature, so it's a **WebP** image — we save it directly (`flag.webp`).
+4. The resulting binary data starts with the `RIFF...WEBP` signature, so it's a **WebP** image, which we save directly (`flag.webp`).
 
 ```python
 from scapy.all import rdpcap, DNS, DNSQR

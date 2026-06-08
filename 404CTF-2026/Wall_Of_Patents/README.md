@@ -4,7 +4,7 @@
 
 ## Challenge overview
 
-**PatentVault** is a Flask service where a user (identified only by a name in the session, with no real authentication) can upload "patents" as an archive via `POST /post_patent` (extracted server-side into `app/uploads/`) and fetch a random comment via `GET /comment`. The **FLAG** is inserted into the database on first startup and is normally only accessible indirectly through a bot mechanism that picks comments (`bot_outputs`) according to a `seed` window that has to be guessed — unless one manages to fully bypass that whole circuit.
+**PatentVault** is a Flask service where a user (identified only by a name in the session, with no real authentication) can upload "patents" as an archive via `POST /post_patent` (extracted server-side into `app/uploads/`) and fetch a random comment via `GET /comment`. The **FLAG** is inserted into the database on first startup and is normally only accessible indirectly through a bot mechanism that picks comments (`bot_outputs`) according to a `seed` window that has to be guessed, unless one manages to fully bypass that whole circuit.
 
 ## The vulnerability
 
@@ -74,7 +74,7 @@ def search_comments():
     return [{"id": 157, "comment": flag}]
 ```
 
-> Note: the app only needs `search_comments` for the `/comment` route, so a minimal stub is enough (the other functions of the real module — namely `init_db`, `search_patents`, `add_patent`, `add_comment`, `change_seed` — are no longer called once the app is already initialized and the session already open).
+> Note: the app only needs `search_comments` for the `/comment` route, so a minimal stub is enough (the other functions of the real module, namely `init_db`, `search_patents`, `add_patent`, `add_comment`, `change_seed`, are no longer called once the app is already initialized and the session already open).
 
 ## The exploit script (`solver.py`)
 

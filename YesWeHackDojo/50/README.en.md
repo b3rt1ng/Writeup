@@ -2,13 +2,13 @@
 
 ---
 
-## CRLF Injection via Newline in Filename Bypasses HMAC Signature Verification — Arbitrary File Read
+## CRLF Injection via Newline in Filename Bypasses HMAC Signature Verification: Arbitrary File Read
 
-The application implements a presigned URL system to control access to files. Signing is restricted to the `public/` prefix, and path traversal via `..` is explicitly blocked. However, a newline character (`\n`) injected into the filename during the signing step is silently stripped by the sanitization function, causing the generated HMAC signature to cover a path traversal payload (`public/../super_secret.txt`) that was never directly allowed. The resulting signature can then be replayed in a download request where no sanitization occurs, allowing the attacker to read arbitrary files — including `super_secret.txt`.
+The application implements a presigned URL system to control access to files. Signing is restricted to the `public/` prefix, and path traversal via `..` is explicitly blocked. However, a newline character (`\n`) injected into the filename during the signing step is silently stripped by the sanitization function, causing the generated HMAC signature to cover a path traversal payload (`public/../super_secret.txt`) that was never directly allowed. The resulting signature can then be replayed in a download request where no sanitization occurs, allowing the attacker to read arbitrary files, including `super_secret.txt`.
 
 ---
 
-## Root Cause — Step-by-Step Breakdown
+## Root Cause: Step-by-Step Breakdown
 
 The vulnerability chain spans two requests and exploits an asymmetry between the `sign` and `download` code paths.
 
@@ -36,7 +36,7 @@ The `sanitizeFilename` function removes control characters including `\n` (`\x0A
 ### The access control checks
 
 ```php
-// sign path only — never checked on download
+// sign path only, never checked on download
 if (str_contains($filename, '..')) {
     // blocked
 } elseif (!str_starts_with($filename, 'public/')) {
@@ -48,9 +48,9 @@ Neither `..` nor the `public/` prefix check is applied during `download`.
 
 ---
 
-## Exploitation — Step-by-Step
+## Exploitation: Step-by-Step
 
-### Step 1 — Inject a newline into the filename at signing time
+### Step 1: Inject a newline into the filename at signing time
 
 The attacker submits a filename containing a literal newline character between the two dots of a `..` sequence:
 
@@ -79,7 +79,7 @@ GET
 
 The application returns a valid `expires` and `signature` for this path.
 
-### Step 2 — Replay the signature with the resolved path
+### Step 2: Replay the signature with the resolved path
 
 In a second request, the attacker submits:
 
@@ -106,13 +106,13 @@ The flag is returned in the response.
 
 ## Impact
 
-An unauthenticated attacker can read **any file** accessible from the `files/` directory, including files explicitly excluded from the signing allowlist. In this case, `super_secret.txt` — which contains the flag — is fully disclosed.
+An unauthenticated attacker can read **any file** accessible from the `files/` directory, including files explicitly excluded from the signing allowlist. In this case, `super_secret.txt` (which contains the flag) is fully disclosed.
 
 ---
 
 ## Proof of Concept
 
-### Request 1 — Sign (newline injected between the dots)
+### Request 1: Sign (newline injected between the dots)
 
 | Field | Value |
 |---|---|
@@ -129,7 +129,7 @@ Expires At : 1775802006
 Signature  : G/d33gqPQ9kss4RYY3hseHoBg2cp8RqrLrumDwhpb3k=
 ```
 
-### Request 2 — Download (path traversal with valid signature)
+### Request 2: Download (path traversal with valid signature)
 
 | Field | Value |
 |---|---|
@@ -196,6 +196,6 @@ The HMAC should be computed over the **resolved, canonical** path so that any no
 |---|---|
 | **Type** | Path Traversal / HMAC Signature Bypass |
 | **Vector** | Filename input → newline injection → sanitization asymmetry |
-| **Impact** | Arbitrary file read — sensitive file disclosure |
+| **Impact** | Arbitrary file read, sensitive file disclosure |
 | **Authentication** | Not required |
 | **CWE** | CWE-22 (Path Traversal), CWE-116 (Improper Encoding or Escaping) |
