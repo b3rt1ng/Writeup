@@ -36,9 +36,9 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 
 | Challenge | Type | GOTO |
 |-----------|------|:--:|
-| Extraction d'ADNs | Forensics / DNS Tunneling / Base32 | [EN](404CTF-2026/ADN/README.md) - [FR](404CTF-2026/ADN/README.fr.md) - [JA](404CTF-2026/ADN/README.ja.md) |
-| Wall Of Patents | Web / Tar Symlink Path Traversal (RCE) | [EN](404CTF-2026/Wall_Of_Patents/README.md) - [FR](404CTF-2026/Wall_Of_Patents/README.fr.md) - [JA](404CTF-2026/Wall_Of_Patents/README.ja.md) |
-| Web-Scientos | Web / Time-Based Blind SQLi | [EN](404CTF-2026/Web-Scientos/README.md) - [FR](404CTF-2026/Web-Scientos/README.fr.md) - [JA](404CTF-2026/Web-Scientos/README.ja.md) |
+| Extraction d'ADNs | Forensics | [EN](404CTF-2026/ADN/README.md) - [FR](404CTF-2026/ADN/README.fr.md) - [JA](404CTF-2026/ADN/README.ja.md) |
+| Wall Of Patents | Web | [EN](404CTF-2026/Wall_Of_Patents/README.md) - [FR](404CTF-2026/Wall_Of_Patents/README.fr.md) - [JA](404CTF-2026/Wall_Of_Patents/README.ja.md) |
+| Web-Scientos | Web | [EN](404CTF-2026/Web-Scientos/README.md) - [FR](404CTF-2026/Web-Scientos/README.fr.md) - [JA](404CTF-2026/Web-Scientos/README.ja.md) |
 
 
 
