@@ -13,18 +13,33 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) | [FR](HackTheBox/MonitorsThree/README.fr.md) | [JA](HackTheBox/MonitorsThree/README.ja.md) |
 | Logging | Medium | Windows | Active Directory / WSUS / ADCS | [EN](HackTheBox/Logging/README.md) | [FR](HackTheBox/Logging/README.fr.md) | [JA](HackTheBox/Logging/README.ja.md) |
 | PingPong | Insane | Windows | Active Directory / Cross-Forest Trust / ADCS | [EN](HackTheBox/PingPong/README.md) | [FR](HackTheBox/PingPong/README.fr.md) | [JA](HackTheBox/PingPong/README.ja.md) |
+| Reactor | Easy | Linux | Web / Node.js Inspector / Privilege Escalation | [EN](HackTheBox/Reactor/README.md) | [FR](HackTheBox/Reactor/README.fr.md) | [JA](HackTheBox/Reactor/README.ja.md) |
+| DevHub | Medium | Linux | Web / API | [EN](HackTheBox/DevHub/README.md) | [FR](HackTheBox/DevHub/README.fr.md) | [JA](HackTheBox/DevHub/README.ja.md) |
 
 
 ---
 
 ## <img src="https://dojo-yeswehack.com/YWH_DOJO_2023-Black.svg" height="60">
 
-| Challenge | Type | EN |
+| Challenge | Type | Language |
 |-----------|------|:--:|
 | Dojo #46 | Command Injection / Unicode NFKC Normalization Bypass (RCE) | [EN](YesWeHackDojo/46/README.en.md) |
 | Dojo #48 | Unsafe Object Deserialization via `Oj.load` (RCE) | [EN](YesWeHackDojo/48/README.en.md) |
 | Dojo #49 | Linux Wildcard Injection in `cp *` (File Disclosure) | [EN](YesWeHackDojo/49/README.en.md) |
 | Dojo #50 | Path Traversal / HMAC Signature Bypass (CRLF Injection) | [EN](YesWeHackDojo/50/README.en.md) |
+| Dojo #51 | ZIP Path Traversal / `eval()` (RCE) | [EN](YesWeHackDojo/51/README.en.md) |
+
+
+---
+
+## <img src="https://www.404ctf.fr/assets/2026/logos/logo_404_2026.svg" height="120" style="vertical-align: middle;"> 404 CTF
+
+| Challenge | Type | GOTO |
+|-----------|------|:--:|
+| Extraction d'ADNs | Forensics / DNS Tunneling / Base32 | [EN](404CTF-2026/ADN/README.md) - [FR](404CTF-2026/ADN/README.fr.md) - [JA](404CTF-2026/ADN/README.ja.md) |
+| Wall Of Patents | Web / Tar Symlink Path Traversal (RCE) | [EN](404CTF-2026/Wall_Of_Patents/README.md) - [FR](404CTF-2026/Wall_Of_Patents/README.fr.md) - [JA](404CTF-2026/Wall_Of_Patents/README.ja.md) |
+| Web-Scientos | Web / Time-Based Blind SQLi | [EN](404CTF-2026/Web-Scientos/README.md) - [FR](404CTF-2026/Web-Scientos/README.fr.md) - [JA](404CTF-2026/Web-Scientos/README.ja.md) |
+
 
 
 ---
