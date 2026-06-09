@@ -32,7 +32,7 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 
 ---
 
-## <img src="https://www.404ctf.fr/assets/2026/logos/logo_404_2026.svg" height="120" style="vertical-align: middle;"> 404 CTF
+## <img src="https://www.404ctf.fr/assets/2026/logos/logo_404_2026.svg" height="120" style="vertical-align: middle;"> 404 CTF (2026)
 
 | Challenge | Type | GOTO |
 |-----------|------|:--:|
