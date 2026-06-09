@@ -1,6 +1,6 @@
 🌐 [English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md)
 
-# MonitorsThree — HackTheBox Writeup
+# MonitorsThree : HackTheBox Writeup
 
 <div style="display: flex; align-items: center; gap: 20px;">
 <img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/a9c8709743c935ae079e3b04d9304c99.png" width="120"/>
@@ -39,7 +39,7 @@ nmap -sC -sV <TARGET_IP> -oN scan.txt -Pn
 ![nmap scan](assets/scan.png)
 
 Ports ouverts : SSH (22), HTTP (80), et quelques services secondaires (5555, 8084).  
-Machine : `monitorsthree.htb` — Linux.
+Machine : `monitorsthree.htb`, Linux.
 
 > SSH est noté pour plus tard. Les ports 5555 et 8084 n'offrent pas de piste d'exploitation évidente.
 
@@ -61,7 +61,7 @@ dirsearch -u http://monitorsthree.htb/
 
 ![dirsearch](assets/dirsearch.png)
 
-On trouve des fichiers JS/polices/images et une page `/admin` — inaccessible pour l'instant.
+On trouve des fichiers JS/polices/images et une page `/admin`, inaccessible pour l'instant.
 
 ### Énumération des sous-domaines
 
@@ -73,13 +73,13 @@ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-11000
 
 ![ffuf](assets/ffuf.png)
 
-On découvre `cacti.monitorsthree.htb` — un outil de monitoring système. Après l'avoir ajouté à `/etc/hosts`, on arrive sur un panneau de login qui révèle la version du logiciel.
+On découvre `cacti.monitorsthree.htb`, un outil de monitoring système. Après l'avoir ajouté à `/etc/hosts`, on arrive sur un panneau de login qui révèle la version du logiciel.
 
 ![cacti](assets/cacti.png)
 
 ---
 
-## Foothold — SQLi + CVE-2024-25641 RCE
+## Foothold : SQLi + CVE-2024-25641 RCE
 
 ### Injection SQL sur la page "Mot de passe oublié"
 
@@ -184,7 +184,7 @@ User flag obtenu.
 
 ---
 
-## Élévation de privilèges — Bypass auth Duplicati
+## Élévation de privilèges : Bypass auth Duplicati
 
 ### Découverte du port interne
 
@@ -248,14 +248,14 @@ Root flag obtenu.
 
 ## Outils utilisés
 
-- `nmap` — scan de ports
-- `dirsearch` — énumération de répertoires
-- `ffuf` — fuzzing de sous-domaines
-- `sqlmap` — exploitation de l'injection SQL
-- `hashcat` — crack de hash
-- `burp suite` — interception de requêtes
-- PoC `CVE-2024-25641` — RCE Cacti
-- `netcat` — listener reverse shell
-- `ssh` / `wget` — exfiltration de la clé
-- `linpeas` — énumération pour l'escalade de privilèges
-- `duplicati` — backup/restore en tant que root
+- `nmap` : scan de ports
+- `dirsearch` : énumération de répertoires
+- `ffuf` : fuzzing de sous-domaines
+- `sqlmap` : exploitation de l'injection SQL
+- `hashcat` : crack de hash
+- `burp suite` : interception de requêtes
+- PoC `CVE-2024-25641` : RCE Cacti
+- `netcat` : listener reverse shell
+- `ssh` / `wget` : exfiltration de la clé
+- `linpeas` : énumération pour l'escalade de privilèges
+- `duplicati` : backup/restore en tant que root

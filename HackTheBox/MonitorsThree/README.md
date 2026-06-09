@@ -1,6 +1,6 @@
 🌐 [English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md)
 
-# MonitorsThree — HackTheBox Writeup
+# MonitorsThree: HackTheBox Writeup
 
 <div style="display: flex; align-items: center; gap: 20px;">
 <img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/a9c8709743c935ae079e3b04d9304c99.png" width="120"/>
@@ -39,7 +39,7 @@ nmap -sC -sV <TARGET_IP> -oN scan.txt -Pn
 ![nmap scan](assets/scan.png)
 
 Open ports: SSH (22), HTTP (80), and a couple of secondary services (5555, 8084).  
-Target: `monitorsthree.htb` — Linux.
+Target: `monitorsthree.htb`, Linux.
 
 > SSH is noted for later. Ports 5555 and 8084 don't offer obvious exploitation paths.
 
@@ -61,7 +61,7 @@ dirsearch -u http://monitorsthree.htb/
 
 ![dirsearch](assets/dirsearch.png)
 
-We find JS/fonts/images and an `/admin` page — not accessible yet.
+We find JS/fonts/images and an `/admin` page, not accessible yet.
 
 ### Subdomain Enumeration
 
@@ -73,13 +73,13 @@ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-11000
 
 ![ffuf](assets/ffuf.png)
 
-We find `cacti.monitorsthree.htb` — a system monitoring tool. After adding it to `/etc/hosts`, we land on a login panel that reveals the running version.
+We find `cacti.monitorsthree.htb`, a system monitoring tool. After adding it to `/etc/hosts`, we land on a login panel that reveals the running version.
 
 ![cacti](assets/cacti.png)
 
 ---
 
-## Foothold — SQLi + CVE-2024-25641 RCE
+## Foothold: SQLi + CVE-2024-25641 RCE
 
 ### SQL Injection on Forgot Password
 
@@ -184,7 +184,7 @@ User flag obtained.
 
 ---
 
-## Privilege Escalation — Duplicati Auth Bypass
+## Privilege Escalation: Duplicati Auth Bypass
 
 ### Internal Port Discovery
 
@@ -248,16 +248,16 @@ Root flag obtained.
 
 ## Tools Used
 
-- `nmap` — port scanning
-- `dirsearch` — directory enumeration
-- `ffuf` — subdomain fuzzing
-- `sqlmap` — SQL injection exploitation
-- `hashcat` — hash cracking
-- `burp suite` — request interception
-- `CVE-2024-25641` PoC — Cacti RCE
-- `netcat` — reverse shell listener
-- `ssh` / `wget` — key exfiltration
-- `linpeas` — privilege escalation enumeration
-- `duplicati` — backup/restore as root
+- `nmap`: port scanning
+- `dirsearch`: directory enumeration
+- `ffuf`: subdomain fuzzing
+- `sqlmap`: SQL injection exploitation
+- `hashcat`: hash cracking
+- `burp suite`: request interception
+- `CVE-2024-25641` PoC: Cacti RCE
+- `netcat`: reverse shell listener
+- `ssh` / `wget`: key exfiltration
+- `linpeas`: privilege escalation enumeration
+- `duplicati`: backup/restore as root
 
 ---

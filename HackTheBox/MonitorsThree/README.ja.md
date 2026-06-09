@@ -1,6 +1,6 @@
 🌐 [English](README.md) | [Français](README.fr.md) | [日本語](README.ja.md)
 
-# MonitorsThree — HackTheBox ライトアップ
+# MonitorsThree: HackTheBox ライトアップ
 
 <div style="display: flex; align-items: center; gap: 20px;">
 <img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/a9c8709743c935ae079e3b04d9304c99.png" width="120"/>
@@ -39,7 +39,7 @@ nmap -sC -sV <TARGET_IP> -oN scan.txt -Pn
 ![nmap scan](assets/scan.png)
 
 開放ポート: SSH (22)、HTTP (80)、補助サービス (5555、8084)。  
-ターゲット: `monitorsthree.htb` — Linux。
+ターゲット: `monitorsthree.htb`、Linux。
 
 > SSH は後で使用する。ポート 5555 と 8084 に明確な攻撃経路はない。
 
@@ -61,7 +61,7 @@ dirsearch -u http://monitorsthree.htb/
 
 ![dirsearch](assets/dirsearch.png)
 
-JS/フォント/画像ファイルと `/admin` ページが見つかる — まだアクセス不可。
+JS/フォント/画像ファイルと `/admin` ページが見つかる（まだアクセス不可）。
 
 ### サブドメイン列挙
 
@@ -73,13 +73,13 @@ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-11000
 
 ![ffuf](assets/ffuf.png)
 
-`cacti.monitorsthree.htb` を発見 — システム監視ツール。`/etc/hosts` に追加するとログインパネルが表示され、動作バージョンが確認できる。
+`cacti.monitorsthree.htb` を発見、システム監視ツール。`/etc/hosts` に追加するとログインパネルが表示され、動作バージョンが確認できる。
 
 ![cacti](assets/cacti.png)
 
 ---
 
-## 初期侵入 — SQLi + CVE-2024-25641 RCE
+## 初期侵入: SQLi + CVE-2024-25641 RCE
 
 ### パスワードリセットページの SQL インジェクション
 
@@ -184,7 +184,7 @@ ssh -i id_rsa marcus@<TARGET_IP>
 
 ---
 
-## 権限昇格 — Duplicati 認証バイパス
+## 権限昇格: Duplicati 認証バイパス
 
 ### 内部ポートの発見
 
@@ -206,9 +206,9 @@ ssh -i id_rsa marcus@<TARGET_IP>
 
 [この記事](https://medium.com/@STarXT/duplicati-bypassing-login-authentication-with-server-passphrase-024d6991e9ee) を参考にログインをバイパス:
 
-1. **データベースパスワードを抽出** — Duplicati のローカル設定ファイルから (marcus としてアクセス可能)。
-2. **Burp Suite でノンスを取得** — ログインフロー中にインターセプト。
-3. **有効なパスワードを生成** — ノンス + データベースパスフレーズから計算。
+1. **データベースパスワードを抽出**: Duplicati のローカル設定ファイルから (marcus としてアクセス可能)。
+2. **Burp Suite でノンスを取得**: ログインフロー中にインターセプト。
+3. **有効なパスワードを生成**: ノンス + データベースパスフレーズから計算。
 
 ![password](assets/password.png)
 ![nonce](assets/nonce.png)
@@ -248,15 +248,15 @@ Duplicati は root 権限で動作しており、システム上の任意ファ�
 
 ## 使用ツール
 
-- `nmap` — ポートスキャン
-- `dirsearch` — ディレクトリ列挙
-- `ffuf` — サブドメインファジング
-- `sqlmap` — SQL インジェクション攻撃
-- `hashcat` — ハッシュクラック
-- `burp suite` — リクエストインターセプト
-- `CVE-2024-25641` PoC — Cacti RCE
-- `netcat` — リバースシェルリスナー
-- `ssh` / `wget` — 鍵の取得
-- `linpeas` — 権限昇格の列挙
-- `duplicati` — root 権限でのバックアップ/リストア
+- `nmap`: ポートスキャン
+- `dirsearch`: ディレクトリ列挙
+- `ffuf`: サブドメインファジング
+- `sqlmap`: SQL インジェクション攻撃
+- `hashcat`: ハッシュクラック
+- `burp suite`: リクエストインターセプト
+- `CVE-2024-25641` PoC: Cacti RCE
+- `netcat`: リバースシェルリスナー
+- `ssh` / `wget`: 鍵の取得
+- `linpeas`: 権限昇格の列挙
+- `duplicati`: root 権限でのバックアップ/リストア
 
