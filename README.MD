@@ -15,6 +15,9 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | PingPong | Insane | Windows | Active Directory / Cross-Forest Trust / ADCS | [EN](HackTheBox/PingPong/README.md) - [FR](HackTheBox/PingPong/README.fr.md) - [JA](HackTheBox/PingPong/README.ja.md) |
 | Reactor | Easy | Linux | Web / Node.js Inspector / Privilege Escalation | [EN](HackTheBox/Reactor/README.md) - [FR](HackTheBox/Reactor/README.fr.md) - [JA](HackTheBox/Reactor/README.ja.md) |
 | DevHub | Medium | Linux | Web / API | [EN](HackTheBox/DevHub/README.md) - [FR](HackTheBox/DevHub/README.fr.md) - [JA](HackTheBox/DevHub/README.ja.md) |
+| Enigma | Easy | Linux | NFS / Webmail / CVE / Command Injection | [EN](HackTheBox/Enigma/README.md) - [FR](HackTheBox/Enigma/README.fr.md) - [JA](HackTheBox/Enigma/README.ja.md) |
+| Helix | Medium | Linux | ICS / Middleware / OPC-UA | [EN](HackTheBox/Helix/README.md) - [FR](HackTheBox/Helix/README.fr.md) - [JA](HackTheBox/Helix/README.ja.md) |
+| MakeSense | Medium | Linux | WordPress / Stored XSS / Arbitrary File Write / OCR | [EN](HackTheBox/MakeSense/README.md) - [FR](HackTheBox/MakeSense/README.fr.md) - [JA](HackTheBox/MakeSense/README.ja.md) |
 
 
 ---
