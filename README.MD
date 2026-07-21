@@ -20,7 +20,7 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | 🟢 MakeSense | Medium | Linux | WordPress / Stored XSS / Arbitrary File Write / OCR | [EN](HackTheBox/MakeSense/README.md) - [FR](HackTheBox/MakeSense/README.fr.md) - [JA](HackTheBox/MakeSense/README.ja.md) |
 | 🟢 Bedside | Hard | Linux | Web / Insecure Deserialization (pdfminer.six & PyTorch) / Docker Network Pivot / LFI | [EN](HackTheBox/Bedside/README.md) - [FR](HackTheBox/Bedside/README.fr.md) - [JA](HackTheBox/Bedside/README.ja.md) |
 
-*🟢 Active — 🔴 Retired*
+*🟢 Active / 🔴 Retired*
 
 
 ---

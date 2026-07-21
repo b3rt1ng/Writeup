@@ -138,7 +138,7 @@ def solve():
     srv = ChallengeServer()
     all_samples = []
     needed = INSTANCE_SIZE - 1
-    print(f"[*] Part 3 attack — need {needed} samples, have {TRIES*INSTANCE_TRIES} queries")
+    print(f"[*] Part 3 attack: need {needed} samples, have {TRIES*INSTANCE_TRIES} queries")
 
     while len(all_samples) < needed + 10 and srv.queries_left() > 1:
         _, (C, D, Ei) = srv.action2()
@@ -158,7 +158,7 @@ def solve():
 
         recovered = recover_ds(cycle_raw, G_prime)
         all_samples.extend(recovered)
-        print(f"    cycle done — total samples: {len(all_samples)}")
+        print(f"    cycle done, total samples: {len(all_samples)}")
 
     # Solve A * rv[:255] = b  over QQ
     print("[*] Solving linear system...")
@@ -189,7 +189,7 @@ def solve():
     if errors == 0:
         print("[+] SUCCESS!")
     else:
-        print(f"[-] FAIL — {errors} errors")
+        print(f"[-] FAIL: {errors} errors")
 
     return rv, true_rv
 

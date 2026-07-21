@@ -55,4 +55,4 @@ The vulnerability stems from the ciphertext cache: by fixing $\alpha$ for an ent
 
 #NOTE:
 
-I started by writing a local solver, which you can read [here](solver.py). To retrieve the flag, you need to interact with a netcat server, and for that we'll use [pwntools](https://docs.pwntools.com/en/stable/) to automate CLI interactions — you can see that solver [here](solve_remote.py)
+I started by writing a local solver, which you can read [here](solver.py). To retrieve the flag, you need to interact with a netcat server, and for that we'll use [pwntools](https://docs.pwntools.com/en/stable/) to automate CLI interactions, you can see that solver [here](solve_remote.py)
