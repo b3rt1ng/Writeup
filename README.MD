@@ -4,21 +4,23 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 
 ## <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6PwGYawa5tdEF66L7-UEpgTkcdZ4F3D1YnA&s" style>
 
-| Machine | Status | Difficulty | OS | Type | GOTO |
-|---------|:--:|------------|-----|------|:--:|
-| Garfield | 🟢 Active | Hard | Windows | Active Directory | [EN](HackTheBox/Garfield/README.md) - [FR](HackTheBox/Garfield/README.fr.md) - [JA](HackTheBox/Garfield/README.ja.md) |
-| DevArea | 🔴 Retired | Medium | Linux | Web / Middleware | [EN](HackTheBox/DevArea/README.md) - [FR](HackTheBox/DevArea/README.fr.md) - [JA](HackTheBox/DevArea/README.jp.md) |
-| Kobold | 🟢 Active | Easy | Linux | Web / Docker | [EN](HackTheBox/Kobold/README.md) - [FR](HackTheBox/Kobold/README.fr.md) - [JA](HackTheBox/Kobold/README.ja.md) |
-| Silentium | 🟢 Active | Easy | Linux | Web / CVE Chain | [EN](HackTheBox/Silentium/README.md) - [FR](HackTheBox/Silentium/README.fr.md) - [JA](HackTheBox/Silentium/README.ja.md) |
-| MonitorsThree | 🔴 Retired | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) - [FR](HackTheBox/MonitorsThree/README.fr.md) - [JA](HackTheBox/MonitorsThree/README.ja.md) |
-| Logging | 🔴 Retired | Medium | Windows | Active Directory / WSUS / ADCS | [EN](HackTheBox/Logging/README.md) - [FR](HackTheBox/Logging/README.fr.md) - [JA](HackTheBox/Logging/README.ja.md) |
-| PingPong | 🟢 Active | Insane | Windows | Active Directory / Cross-Forest Trust / ADCS | [EN](HackTheBox/PingPong/README.md) - [FR](HackTheBox/PingPong/README.fr.md) - [JA](HackTheBox/PingPong/README.ja.md) |
-| Reactor | 🟢 Active | Easy | Linux | Web / Node.js Inspector / Privilege Escalation | [EN](HackTheBox/Reactor/README.md) - [FR](HackTheBox/Reactor/README.fr.md) - [JA](HackTheBox/Reactor/README.ja.md) |
-| DevHub | 🟢 Active | Medium | Linux | Web / API | [EN](HackTheBox/DevHub/README.md) - [FR](HackTheBox/DevHub/README.fr.md) - [JA](HackTheBox/DevHub/README.ja.md) |
-| Enigma | 🟢 Active | Easy | Linux | NFS / Webmail / CVE / Command Injection | [EN](HackTheBox/Enigma/README.md) - [FR](HackTheBox/Enigma/README.fr.md) - [JA](HackTheBox/Enigma/README.ja.md) |
-| Helix | 🟢 Active | Medium | Linux | ICS / Middleware / OPC-UA | [EN](HackTheBox/Helix/README.md) - [FR](HackTheBox/Helix/README.fr.md) - [JA](HackTheBox/Helix/README.ja.md) |
-| MakeSense | 🟢 Active | Medium | Linux | WordPress / Stored XSS / Arbitrary File Write / OCR | [EN](HackTheBox/MakeSense/README.md) - [FR](HackTheBox/MakeSense/README.fr.md) - [JA](HackTheBox/MakeSense/README.ja.md) |
-| Bedside | 🟢 Active | Hard | Linux | Web / Insecure Deserialization (pdfminer.six & PyTorch) / Docker Network Pivot / LFI | [EN](HackTheBox/Bedside/README.md) - [FR](HackTheBox/Bedside/README.fr.md) - [JA](HackTheBox/Bedside/README.ja.md) |
+| Machine | Difficulty | OS | Type | GOTO |
+|---------|------------|-----|------|:--:|
+| 🟢 Garfield | Hard | Windows | Active Directory | [EN](HackTheBox/Garfield/README.md) - [FR](HackTheBox/Garfield/README.fr.md) - [JA](HackTheBox/Garfield/README.ja.md) |
+| 🔴 DevArea | Medium | Linux | Web / Middleware | [EN](HackTheBox/DevArea/README.md) - [FR](HackTheBox/DevArea/README.fr.md) - [JA](HackTheBox/DevArea/README.jp.md) |
+| 🟢 Kobold | Easy | Linux | Web / Docker | [EN](HackTheBox/Kobold/README.md) - [FR](HackTheBox/Kobold/README.fr.md) - [JA](HackTheBox/Kobold/README.ja.md) |
+| 🟢 Silentium | Easy | Linux | Web / CVE Chain | [EN](HackTheBox/Silentium/README.md) - [FR](HackTheBox/Silentium/README.fr.md) - [JA](HackTheBox/Silentium/README.ja.md) |
+| 🔴 MonitorsThree | Medium | Linux | Web / SQLi / CVE | [EN](HackTheBox/MonitorsThree/README.md) - [FR](HackTheBox/MonitorsThree/README.fr.md) - [JA](HackTheBox/MonitorsThree/README.ja.md) |
+| 🔴 Logging | Medium | Windows | Active Directory / WSUS / ADCS | [EN](HackTheBox/Logging/README.md) - [FR](HackTheBox/Logging/README.fr.md) - [JA](HackTheBox/Logging/README.ja.md) |
+| 🟢 PingPong | Insane | Windows | Active Directory / Cross-Forest Trust / ADCS | [EN](HackTheBox/PingPong/README.md) - [FR](HackTheBox/PingPong/README.fr.md) - [JA](HackTheBox/PingPong/README.ja.md) |
+| 🟢 Reactor | Easy | Linux | Web / Node.js Inspector / Privilege Escalation | [EN](HackTheBox/Reactor/README.md) - [FR](HackTheBox/Reactor/README.fr.md) - [JA](HackTheBox/Reactor/README.ja.md) |
+| 🟢 DevHub | Medium | Linux | Web / API | [EN](HackTheBox/DevHub/README.md) - [FR](HackTheBox/DevHub/README.fr.md) - [JA](HackTheBox/DevHub/README.ja.md) |
+| 🟢 Enigma | Easy | Linux | NFS / Webmail / CVE / Command Injection | [EN](HackTheBox/Enigma/README.md) - [FR](HackTheBox/Enigma/README.fr.md) - [JA](HackTheBox/Enigma/README.ja.md) |
+| 🟢 Helix | Medium | Linux | ICS / Middleware / OPC-UA | [EN](HackTheBox/Helix/README.md) - [FR](HackTheBox/Helix/README.fr.md) - [JA](HackTheBox/Helix/README.ja.md) |
+| 🟢 MakeSense | Medium | Linux | WordPress / Stored XSS / Arbitrary File Write / OCR | [EN](HackTheBox/MakeSense/README.md) - [FR](HackTheBox/MakeSense/README.fr.md) - [JA](HackTheBox/MakeSense/README.ja.md) |
+| 🟢 Bedside | Hard | Linux | Web / Insecure Deserialization (pdfminer.six & PyTorch) / Docker Network Pivot / LFI | [EN](HackTheBox/Bedside/README.md) - [FR](HackTheBox/Bedside/README.fr.md) - [JA](HackTheBox/Bedside/README.ja.md) |
+
+*🟢 Active — 🔴 Retired*
 
 
 ---
