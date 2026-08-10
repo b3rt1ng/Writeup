@@ -16,10 +16,11 @@ Personal collection of CTF writeups, available in English, French, and Japanese.
 | 🟢 Reactor | Easy | Linux | Web / Node.js Inspector / Privilege Escalation | [EN](HackTheBox/Reactor/README.md) - [FR](HackTheBox/Reactor/README.fr.md) - [JA](HackTheBox/Reactor/README.ja.md) |
 | 🟢 DevHub | Medium | Linux | Web / API | [EN](HackTheBox/DevHub/README.md) - [FR](HackTheBox/DevHub/README.fr.md) - [JA](HackTheBox/DevHub/README.ja.md) |
 | 🟢 Enigma | Easy | Linux | NFS / Webmail / CVE / Command Injection | [EN](HackTheBox/Enigma/README.md) - [FR](HackTheBox/Enigma/README.fr.md) - [JA](HackTheBox/Enigma/README.ja.md) |
-| 🟢 Helix | Medium | Linux | ICS / Middleware / OPC-UA | [EN](HackTheBox/Helix/README.md) - [FR](HackTheBox/Helix/README.fr.md) - [JA](HackTheBox/Helix/README.ja.md) |
+| 🔴 Helix | Medium | Linux | ICS / Middleware / OPC-UA | [EN](HackTheBox/Helix/README.md) - [FR](HackTheBox/Helix/README.fr.md) - [JA](HackTheBox/Helix/README.ja.md) |
 | 🟢 MakeSense | Medium | Linux | WordPress / Stored XSS / Arbitrary File Write / OCR | [EN](HackTheBox/MakeSense/README.md) - [FR](HackTheBox/MakeSense/README.fr.md) - [JA](HackTheBox/MakeSense/README.ja.md) |
 | 🟢 Bedside | Hard | Linux | Web / Insecure Deserialization (pdfminer.six & PyTorch) / Docker Network Pivot / LFI | [EN](HackTheBox/Bedside/README.md) - [FR](HackTheBox/Bedside/README.fr.md) - [JA](HackTheBox/Bedside/README.ja.md) |
 | 🟢 DarkZeroReturns | Hard | Windows | Web RCE / Gitea Actions Abuse / Kerberos ksu / Cross-Forest Trust Abuse | [EN](HackTheBox/DarkZeroReturns/README.md) - [FR](HackTheBox/DarkZeroReturns/README.fr.md) - [JA](HackTheBox/DarkZeroReturns/README.ja.md) |
+| 🟢 DanglingTree | Medium | Windows | Windows Admin Center RCE / SmarterMail Auth Bypass / Orphaned Domain Folder / ADCS ESC1 | [EN](HackTheBox/DanglingTree/README.md) - [FR](HackTheBox/DanglingTree/README.fr.md) - [JA](HackTheBox/DanglingTree/README.ja.md) |
 
 *🟢 Active / 🔴 Retired*
 
